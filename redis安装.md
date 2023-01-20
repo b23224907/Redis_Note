@@ -31,3 +31,48 @@ redis-cli
 PONG
 ```
 
+
+
+## 设置密码
+
+### 打开配置文件
+
+```
+sudo nano /etc/redis/redis.conf
+```
+
+### 修改参数
+
+```
+取消该行注释, foobared替换为想要设置的密码
+requirepass foobared
+```
+
+### 重启redis生效
+
+```
+sudo systemctl start redis
+```
+
+
+
+## 设置外部访问
+
+### 打开配置文件
+
+```
+sudo nano /etc/redis/redis.conf
+```
+
+### 注释该行
+
+```
+#bind 127.0.0.1
+```
+
+### 重启redis生效
+
+```
+sudo systemctl start redis
+```
+
