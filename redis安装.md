@@ -64,10 +64,10 @@ sudo systemctl start redis
 sudo nano /etc/redis/redis.conf
 ```
 
-### 注释该行
+### bind 127.0.0.1改为
 
 ```
-#bind 127.0.0.1
+bind 0.0.0.0
 ```
 
 ### 重启redis生效
